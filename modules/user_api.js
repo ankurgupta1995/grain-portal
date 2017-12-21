@@ -1,4 +1,4 @@
-var validator = require("validator");
+var Validator = require("validator");
 var User = require("../models/user");
 
 
@@ -90,10 +90,12 @@ var UserApi = {
             var newUser = new User(user);
             newUser.save(function(err) {
                 if(err) {
-                    return callback({success: false, error: err});
+                    callback({success: false, error: err});
                 }
-                return callback({success: true});
+                callback({success: true});
             });
+        } else {
+            callback({success: false, error:userValidate.message});
         }
     },
     read: function(user, callback){
