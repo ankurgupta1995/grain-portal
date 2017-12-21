@@ -88,16 +88,25 @@ var UserApi = {
             //ask about generating password
             user.password = getRandomInt(10000000, 99999999).toString();
             var newUser = new User(user);
-            newUser.save(function(err) {
+            newUser.save(function(err, user) {
                 if(err) {
                     callback({success: false, error: err});
                 }
-                callback({success: true});
+                callback({success: true, user: user});
             });
         } else {
-            callback({success: false, error:userValidate.message});
+            callback({success: false, error: userValidate.message});
         }
     },
+    
+    login: function(user, callback){
+        
+    },
+    
+    logout: function(user, callback){
+        
+    },
+    
     read: function(user, callback){
         
     },
