@@ -1,0 +1,32 @@
+Farmer Report Object:
+
+Type: Characters
+Username: Numbers, characters
+SensorID:
+Quantity: Numbers
+Raw_sensorStartDate: MM/DD/YYYY
+raw_sensorEndDate: MM/DD/YYYY
+
+
+sensor_report object:
+
+sensor_report.major: major in database, digit string.
+sensor_report.minor: minor in database, digit string.
+sensor_report.humidity: humidity in database, number.
+sensor_report.temperature: temperature in database, number.
+
+
+user object:
+
+user.username: username in database, can contain number and characters.
+user.userType: 0 = admin, 1 = farmer, 2 = trader. userType in database.
+user.phoneNumber: phoneNumber in database.
+user.firstName: firstName in database.
+user.lastName: lastName in database.
+user.country: country in database.
+user.city: (optional) city in database.
+user.state: (optional) state in database.
+user.address: (optional) address in database.
+user.zipCode: (optional) zipCode in database.
+user.email: (optional) email in database. Must be a valid e-mail address if filled.
+user.password: (will be generated automatically) password in database.
